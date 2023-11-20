@@ -55,6 +55,7 @@ class PostController extends Controller
             'slug' => Str::slug($request->title),
             'image' => 'image.jpg',
             'description' => $request->description,
+            'iframe' => $request->iframe,
             'category_id' => $request->category,
             'user_id' => auth()->user()->id,
             'published_at' => Carbon::now(),
@@ -116,6 +117,7 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->slug = Str::slug($request->title);
         $post->description = $request->description;
+        $post->iframe = $request->iframe;
         $post->category_id = $request->category;
 
         $post->tags()->sync($request->tags);

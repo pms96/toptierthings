@@ -25,9 +25,23 @@
     <div class="container">
         <div class="row blog-entries element-animate">
             <div class="col-md-12 col-lg-8 main-content">
+                @if ( !empty($post->iframe) )
+                    <div class="iframe text-center mb-2">
+                        {!! $post->iframe !!}
+                    </div>
+                @endif
+
+                
                 <div class="post-content-body">
                     {!! $post->description !!}
                 </div>
+
+                @if ( !empty($post->iframe) )
+                    <div class="iframe text-center mt-2">
+                        {!! $post->iframe !!}
+                    </div>
+                @endif
+
                 <div class="pt-5">
                     <p>
                         Categories: <a href="#">{{ $post->category->name }}</a> 

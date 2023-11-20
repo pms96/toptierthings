@@ -86,6 +86,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="iframe">IFrame</label>
+                                            <textarea name="iframe" id="iframe" rows="2" class="form-control" placeholder="Enter Iframe">{{ $post->iframe }}</textarea>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="exampleInputPassword1">Description</label>
                                             <textarea name="description" id="description" rows="4" class="form-control"
                                                 placeholder="Enter description">{{ $post->description }}</textarea>
