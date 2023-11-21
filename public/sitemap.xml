@@ -1,58 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-<url>
-  <loc>https://www.toptierthings.es/</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/category/tecnologia</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/category/hogar</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/category/moda</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/category/cocina</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/category/viajes</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/about</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/contact</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.toptierthings.es/tag/bestseller</loc>
-  <lastmod>2023-11-21T09:41:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+  <url>
+       <loc>https://www.toptierthings.es/</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/category/tecnologia</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/category/hogar</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/category/moda</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/category/cocina</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/category/viajes</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/g-homa-camara-vigilancia-wifi</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/virtavo-camara-vigilancia</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/adoric-bascula-digital-para-cocina-de-acero-inoxidable</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/slator-lampara-escritorio-led</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/adidas-adilette-aqua</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/szlx-mochila-de-viaje-grande-para-mujeres</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/logitech-mx-keys-advanced</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/cecotec-ventilador-de-techo-con-luz-aero-5600</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/post/cosori-freidora-de-aire-55-l</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/about</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/contact</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.toptierthings.es/tag/bestseller</loc>
+       <lastmod>2023-11-21T09:58:41+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
 </urlset>
