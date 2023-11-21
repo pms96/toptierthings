@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <title>Top Tier Things</title>
     <meta charset="utf-8">
@@ -47,7 +47,7 @@
           </div>
 
           <div class="col-4 site-logo">
-            <a href="index.html" class="text-black h2 mb-0">Top Tier Things</a>
+            <a href="{{ route('website') }}" class="text-black h2 mb-0">Top Tier Things</a>
           </div>
 
           <div class="col-8 text-right">
@@ -89,7 +89,7 @@
           </div>
           <div class="col-md-4">
             <div>
-              <h3 class="footer-heading mb-4">Connect With Us</h3>
+              <h3 class="footer-heading mb-4">Connect With Us:</h3>
               <p>
                 @if($setting->facebook)<a target="_blank" href="{{ $setting->facebook }}"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a> @endif
                 @if($setting->twitter)<a target="_blank" href="{{ $setting->twitter }}"><span class="icon-twitter p-2"></span></a> @endif
@@ -103,9 +103,8 @@
         <div class="row">
           <div class="col-12 text-center">
             <p>
-              {{ $setting->copyright }} | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-              <div class="mb-0">Developed By Zakir on <a href="https://www.youtube.com/playlist?list=PLl4v4A2HI0YixTm5AsoTu-sKxiQti4-r6">Laravel Blog Development </a>Tutorial Series</div>
-              </p>
+              {{ $setting->copyright }} |  by <a href="https://rablo.es" target="_blank" >Rablo</a>
+            </p>
           </div>
         </div>
       </div>

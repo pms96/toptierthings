@@ -68,7 +68,6 @@
                             <span class="d-inline-block mt-1">By <a href="#">{{ $post->user->name }}</a></span>
                             <span>&nbsp;-&nbsp; {{ $post->created_at->format('M d, Y') }} </span>
                         </div>
-                        <p> {{ Str::limit($post->description, 100) }} </p>
                         <p><a href="{{ route('website.post', ['slug' => $post->slug]) }}">Read More</a></p>
                     </div>
                 </div>
@@ -135,7 +134,7 @@
     </div>
 </div>
 
-<div class="site-section bg-lightx">
+{{-- <div class="site-section bg-lightx">
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-md-5">
@@ -151,5 +150,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
