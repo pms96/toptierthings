@@ -201,23 +201,23 @@
                     </form>
                 </div>
                 <!-- END sidebar-box -->
-                <div class="sidebar-box">
+                {{-- <div class="sidebar-box">
                     <div class="bio text-center">
                         <img src="@if($post->user->image) {{ $post->user->image }} @else {{ asset('website/images/user.png') }} @endif" alt="Image Placeholder"
                             class="img-fluid mb-5">
                         <div class="bio-body">
                             <h2>{{ $post->user->name }}</h2>
                             <p class="mb-4">{{ $post->user->description }}</p>
-                            {{-- <p><a href="#" class="btn btn-primary btn-sm rounded px-4 py-2">Read my bio</a></p>
+                            <p><a href="#" class="btn btn-primary btn-sm rounded px-4 py-2">Read my bio</a></p>
                             <p class="social">
                                 <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
                                 <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
                                 <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
                                 <a href="#" class="p-2"><span class="fa fa-youtube-play"></span></a>
-                            </p> --}}
+                            </p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- END sidebar-box -->
                 <div class="sidebar-box">
                     <h3 class="heading">Popular Posts</h3>
