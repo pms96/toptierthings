@@ -101,6 +101,22 @@
             </a>
           </li>
           <li class="nav-item mt-auto">
+            <a href="{{ route('roles.index') }}" class="nav-link {{ (request()->is('admin/roles*')) ? 'active': '' }}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Roles
+              </p>
+            </a>
+          </li>
+          <li class="nav-item mt-auto">
+            <a href="{{ route('permissions.index') }}" class="nav-link {{ (request()->is('admin/permissions*')) ? 'active': '' }}">
+              <i class="nav-icon fas fa-unlock-alt"></i>
+              <p>
+                Permissions
+              </p>
+            </a>
+          </li>
+          <li class="nav-item mt-auto">
             <a href="{{ route('setting.index') }}" class="nav-link {{ (request()->is('admin/setting')) ? 'active': '' }}">
               <i class="nav-icon fas fa-cog"></i>
               <p>

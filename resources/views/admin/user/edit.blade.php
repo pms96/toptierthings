@@ -45,6 +45,15 @@
                                             <input type="name" name="name" class="form-control" id="name" placeholder="Enter name" value="{{ $user->name }} ">
                                         </div>
                                         <div class="form-group">
+                                            <label for="name">Rol</label>
+                                            <select id="role" name="role" class="form-control">
+                                                <option value="0">Select Role</option>
+                                                @foreach ( $roles as $role) 
+                                                    <option value="{{ $role->id }}" {{ $role->id == $user->roles[0]->id ? 'selected' : '' }}>{{ $role->name }}</option>
+                                                @endforeach                                                
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="email">User email</label>
                                             <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" value="{{ $user->email }} ">
                                         </div>

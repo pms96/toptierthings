@@ -23,7 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('category', 'CategoryController');
     Route::resource('tag', 'TagController');
     Route::resource('post', 'PostController');
-    Route::resource('user', 'UserController');
+    
     Route::get('/profile', 'UserController@profile')->name('user.profile');
     Route::post('/profile', 'UserController@profile_update')->name('user.profile.update');
     
@@ -35,4 +35,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/contact', 'ContactController@index')->name('contact.index');
     Route::get('/contact/show/{id}', 'ContactController@show')->name('contact.show');
     Route::delete('/contact/delete/{id}', 'ContactController@destroy')->name('contact.destroy');
+
+    Route::resource('/user', 'UserController')->except(['index']);
+    
+    //Roles administration    
+    Route::middleware(['role:admin'])->group(function(){
+        Route::get('user', 'UserController@index')->name('user.index');
+        Route::resource('/roles', 'RolesController');
+        Route::resource('/permissions', 'PermissionController');
+        Route::put('/users/{user}/roles', 'UserController@updateRoles')->name('users.updateRoles');
+        Route::post('roles/{role}/permissions', 'PermissionController@givePermission')->name('givePermission');
+        Route::post('roles/{role}/permissions/{permission}', 'PermissionController@revokePermission')->name('revokePermission');
+    });
+
+
 });

@@ -40,6 +40,7 @@
                                     <th>Image</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Rol</th>
                                     <th  style="width: 150px">Action</th>
                                 </tr>
                             </thead>
@@ -55,6 +56,7 @@
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
+                                        <td>{{ $user->roles[0]->name }}</td>
                                         <td class="d-flex" style="width: 150px">
                                             <a href="{{ route('user.edit', [$user->id]) }}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i> </a>
                                             <form action="{{ route('user.destroy', [$user->id]) }}" class="mr-1" method="POST">
