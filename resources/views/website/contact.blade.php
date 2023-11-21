@@ -6,7 +6,7 @@
           <div class="col-md-12 col-lg-10">
             <div class="post-entry text-center">
               <h1 class="">Contact Us</h1>
-              <p class="lead mb-4 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, adipisci?</p>
+              <p class="lead mb-4 text-white"></p>
             </div>
           </div>
         </div>

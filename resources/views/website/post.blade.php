@@ -44,7 +44,7 @@
 
                 <div class="pt-5">
                     <p>
-                        Categories: <a href="#">{{ $post->category->name }}</a> 
+                        Categories: <a href="{{ route('website.category', ['slug' => $post->category->slug]) }}">{{ $post->category->name }}</a> 
                         @if($post->tags()->count() > 0)
                         Tags: 
                             @foreach($post->tags as $tag)
@@ -54,7 +54,7 @@
                     </p>
                 </div>
                 <div class="pt-5">
-                    <h3 class="mb-5" id="dsq-count-scr">6 Comments</h3>
+                    <h3 class="mb-5" id="dsq-count-scr">Comments</h3>
                     <a href="{{ route('website.post', ['slug' => $post->slug]) }}#disqus_thread">Comments</a>
                     
                     <div id="disqus_thread"></div>
@@ -208,13 +208,13 @@
                         <div class="bio-body">
                             <h2>{{ $post->user->name }}</h2>
                             <p class="mb-4">{{ $post->user->description }}</p>
-                            <p><a href="#" class="btn btn-primary btn-sm rounded px-4 py-2">Read my bio</a></p>
+                            {{-- <p><a href="#" class="btn btn-primary btn-sm rounded px-4 py-2">Read my bio</a></p>
                             <p class="social">
                                 <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
                                 <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
                                 <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
                                 <a href="#" class="p-2"><span class="fa fa-youtube-play"></span></a>
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                         <ul>
                             @foreach($posts as $post)
                             <li>
-                                <a href="">
+                                <a href={{ route('website.post', ['slug' => $post->slug]) }}>
                                     <img src="{{ $post->image }}" alt="Image placeholder"
                                         class="mr-4">
                                     <div class="text">
@@ -246,7 +246,7 @@
                     <h3 class="heading">Categories</h3>
                     <ul class="categories">
                         @foreach($categories as $category)
-                        <li><a href="#">{{ $category->name }} <span>(12)</span> </a></li>
+                        <li><a href="{{ route('website.category', ['slug' => $category->slug]) }}">{{ $category->name }} </a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -280,7 +280,7 @@
 
             <div class="col-md-5 order-md-2">
                 @foreach($lastRelatedPost as $post)
-                <a href="single.html" class="hentry img-1 h-100 gradient"
+                <a href="{{ route('website.post', ['slug' => $post->slug]) }}" class="hentry img-1 h-100 gradient"
                     style="background-image: url('{{ $post->image }}');">
                     <span class="post-category text-white bg-danger">{{ $post->category->name }}</span>
                     <div class="text">
@@ -293,7 +293,7 @@
 
             <div class="col-md-7">
                 @foreach($firstRelatedPost as $post)
-                <a href="single.html" class="hentry img-2 v-height mb30 gradient"
+                <a href="{{ route('website.post', ['slug' => $post->slug]) }}" class="hentry img-2 v-height mb30 gradient"
                     style="background-image: url('{{ $post->image }}');">
                     <span class="post-category text-white bg-success">{{ $post->category->name }}</span>
                     <div class="text text-sm">
@@ -321,7 +321,7 @@
     </div>
 </div>
 
-<div class="site-section bg-lightx">
+{{-- <div class="site-section bg-lightx">
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-md-5">
@@ -337,7 +337,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
 
 @section('script')
