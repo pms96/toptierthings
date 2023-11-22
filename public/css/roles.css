@@ -1,0 +1,160 @@
+.team-box .team-cover, .profile-offcanvas .team-cover, .modal-team-cover {
+    display: none;
+    position: relative;
+    margin-bottom: -140px;
+}
+.team-box .team-cover img, .profile-offcanvas .team-cover img, .modal-team-cover img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+}
+.team-box .team-cover::before, .profile-offcanvas .team-cover::before, .modal-team-cover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #013889, #0d6efd);
+    opacity: 0.6;
+}
+.team-list.grid-view-filter {
+    flex-flow: row wrap;
+}
+.team-list.grid-view-filter .col {
+    flex: 0 0 auto;
+    width: 25%;
+}
+.team-list.grid-view-filter .team-box {
+    overflow: hidden;
+}
+.team-list.grid-view-filter .team-box .team-row {
+    align-items: start;
+}
+.team-list.grid-view-filter .team-box .team-row .col {
+    width: 100%;
+}
+.team-list.grid-view-filter .team-box .team-cover {
+    display: block;
+}
+.team-list.grid-view-filter .team-box .team-settings .col {
+    width: 50% !important;
+    flex: 0 0 auto;
+}
+.team-list.grid-view-filter .team-box .team-settings .btn-star {
+    color: #fff;
+}
+.team-list.grid-view-filter .team-box .team-settings .dropdown > a {
+    color: #fff;
+}
+.team-list.grid-view-filter .team-box .team-profile-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 36px;
+}
+.team-list.grid-view-filter .team-box .team-profile-img .avatar-lg {
+    font-size: 22px;
+}
+.team-list.grid-view-filter .team-box .team-profile-img .team-content {
+    margin-left: 0px;
+    margin-top: 25px;
+    text-align: center;
+}
+.team-list.grid-view-filter .team-box .view-btn {
+    width: 100%;
+    margin-top: 25px;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .team-list.grid-view-filter .col {
+        flex: 0 0 auto;
+        width: 33.33%;
+   }
+}
+@media (max-width: 1199.98px) {
+    .team-list.grid-view-filter .col {
+        flex: 0 0 auto;
+        width: 50%;
+   }
+}
+@media (max-width: 767.98px) {
+    .team-list.grid-view-filter .col {
+        flex: 0 0 auto;
+        width: 100%;
+   }
+}
+.team-list.list-view-filter {
+    flex-direction: column;
+}
+.team-list.list-view-filter .team-box {
+    margin-bottom: 10px;
+}
+.team-list.list-view-filter .team-box .team-row {
+    align-items: center;
+    justify-content: space-between;
+}
+.team-list.list-view-filter .team-box .team-profile-img {
+    display: flex;
+    align-items: center;
+}
+.team-list.list-view-filter .team-box .team-profile-img .avatar-lg {
+    height: 4rem;
+    width: 4rem;
+    font-size: 16px;
+}
+.team-list.list-view-filter .team-box .team-profile-img .team-content {
+    margin-left: 15px;
+}
+.team-list.list-view-filter .team-box .team-settings {
+    width: auto;
+    flex: 0 0 auto;
+    -webkit-box-ordinal-group: 7;
+    order: 6;
+}
+.team-list.list-view-filter .team-box .btn-star {
+    color: #0d6efd;
+}
+@media (max-width: 767.98px) {
+    .team-list.list-view-filter {
+        flex-direction: row;
+   }
+    .team-list.list-view-filter .col {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 100%;
+   }
+    .team-list.list-view-filter .team-box .team-settings {
+        width: 100%;
+        flex: 0 0 auto;
+        order: -1;
+        margin-bottom: 10px;
+   }
+    .team-list.list-view-filter .team-box .team-settings .col {
+        width: 50%;
+   }
+    .team-list.list-view-filter .team-box .team-profile-img {
+        margin-bottom: 25px;
+   }
+    .team-list.list-view-filter .team-box .view-btn {
+        width: 100%;
+        margin-top: 25px;
+   }
+}
+.modal-team-cover {
+    display: block;
+}
+.list-grid-nav .nav-link.active {
+    background-color: #0dcaf0;
+    color: #fff;
+}
+.profile-offcanvas .team-cover {
+    margin-bottom: -132px;
+    display: block;
+    z-index: -1;
+}
+.profile-offcanvas .btn-star {
+    color: #fff;
+}
+.profile-offcanvas .dropdown > a {
+    color: #fff;
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Session;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -37,7 +38,9 @@ class UserController extends Controller
     }
 
     public function edit(User $user){
-        return view('admin.user.edit', compact('user'));
+        $roles = Role::all();
+        
+        return view('admin.user.edit', compact('user','roles'));
     }
 
     public function update(Request $request, User $user){
@@ -99,5 +102,25 @@ class UserController extends Controller
 
         Session::flash('success', 'User profile updated successfully');
         return redirect()->back();
+    }
+
+    function updateRoles (Request $request, User $user) {
+
+        $request->validate([
+            'role_id' => ['required', 'int'],
+            'role_name' => ['required', 'string', 'max:255'],
+            'model_id' => ['required', 'int'],
+        ]);
+        
+        if ($user->hasRole($request->role_name) ||  (isset($user->Roles[0]) && $user->hasRole($user->Roles[0]['name'])) ) {
+            $user->removeRole($request->role_name);
+            $user->removeRole($user->Roles[0]['name']);
+        }
+
+        $user->assignRole($request->role_name);
+
+        
+        return 'Rol Actualizado';
+        
     }
 }

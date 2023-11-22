@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
 
   <title>Admin Panel</title>
   <link rel="stylesheet" href="{{ asset('admin') }}/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="{{ asset('admin') }}/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{ asset('/css/roles.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   @yield('style')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -97,6 +101,22 @@
               <i class="nav-icon fas fa-user"></i>
               <p>
                 User
+              </p>
+            </a>
+          </li>
+          <li class="nav-item mt-auto">
+            <a href="{{ route('roles.index') }}" class="nav-link {{ (request()->is('admin/roles*')) ? 'active': '' }}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Roles
+              </p>
+            </a>
+          </li>
+          <li class="nav-item mt-auto">
+            <a href="{{ route('permissions.index') }}" class="nav-link {{ (request()->is('admin/permissions*')) ? 'active': '' }}">
+              <i class="nav-icon fas fa-unlock-alt"></i>
+              <p>
+                Permissions
               </p>
             </a>
           </li>
