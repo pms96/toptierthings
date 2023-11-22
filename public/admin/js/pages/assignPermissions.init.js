@@ -11,8 +11,8 @@ File: Permissions Init Js File
 function ajaxAsingPermission (params, route) {
 
     var routes = {
-        'givePermission':'/roles/' + params.role_id + '/permissions' ,
-        'revokePermission': '/roles/' + params.role_id + '/permissions/' + params.permission_id,
+        'givePermission':'/admin/roles/' + params.role_id + '/permissions' ,
+        'revokePermission': '/admin/roles/' + params.role_id + '/permissions/' + params.permission_id,
     };
 
     $.ajax({

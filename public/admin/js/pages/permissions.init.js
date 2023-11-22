@@ -226,12 +226,12 @@ function loadTeamData(datas) {
                         <div class="col-1">\
                             <div class="row">\
                                 <div class="col text-end dropdown">\
-                                    <a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">\
-                                        <i class="ri-more-fill fs-17"></i>\
+                                    <a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">\
+                                        <i class="fa fa-bars"></i>\
                                     </a>\
                                     <ul class="dropdown-menu dropdown-menu-end">\
-                                        <li><a class="dropdown-item edit-list" href="#addPermissionModal"  data-bs-toggle="modal" data-edit-id="'+roleData.id+'"><i class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a></li>\
-                                        <li><a class="dropdown-item remove-list" href="#removeRoleModal" data-bs-toggle="modal" data-remove-id="'+roleData.id+'"><i class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a></li>\
+                                        <li><a class="dropdown-item edit-list" href="#addPermissionModal"  data-toggle="modal" data-edit-id="'+roleData.id+'"><i class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a></li>\
+                                        <li><a class="dropdown-item remove-list" href="#removeRoleModal" data-toggle="modal" data-remove-id="'+roleData.id+'"><i class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a></li>\
                                     </ul>\
                                 </div>\
                             </div>\
