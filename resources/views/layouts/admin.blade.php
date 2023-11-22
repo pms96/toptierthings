@@ -9,18 +9,25 @@
   <title>Admin Panel</title>
   <link rel="stylesheet" href="{{ asset('admin') }}/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="{{ asset('admin') }}/css/adminlte.min.css">
-  <link rel="stylesheet" href="{{ asset('/css/roles.css') }}">
+  {{-- <link rel="stylesheet" href="{{ asset('/css/roles.css') }}"> --}}
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   @yield('style')
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+    {{-- Collapse Button --}}
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
@@ -104,21 +111,28 @@
               </p>
             </a>
           </li>
-          <li class="nav-item mt-auto">
-            <a href="{{ route('roles.index') }}" class="nav-link {{ (request()->is('admin/roles*')) ? 'active': '' }}">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Roles
-              </p>
-            </a>
-          </li>
-          <li class="nav-item mt-auto">
-            <a href="{{ route('permissions.index') }}" class="nav-link {{ (request()->is('admin/permissions*')) ? 'active': '' }}">
+          <li class="nav-item has-treeview {{ (request()->is('admin/roles*') || request()->is('admin/permissions*')) ? 'menu-open': '' }}">
+            <a href="#" class="nav-link {{ (request()->is('admin/roles*') || request()->is('admin/permissions*')) ? 'active': '' }}">
               <i class="nav-icon fas fa-unlock-alt"></i>
               <p>
-                Permissions
+                Administration
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview" style="display: {{ (request()->is('admin/roles*') || request()->is('admin/permissions*')) ? 'block': 'none' }};">
+              <li class="nav-item">
+                <a href="{{ route('roles.index') }}" class="nav-link {{ (request()->is('admin/roles*')) ? 'active': '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Roles</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('permissions.index') }}" class="nav-link {{ (request()->is('admin/permissions*')) ? 'active': '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Permissions</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item mt-auto">
             <a href="{{ route('setting.index') }}" class="nav-link {{ (request()->is('admin/setting')) ? 'active': '' }}">

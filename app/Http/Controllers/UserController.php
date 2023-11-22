@@ -31,7 +31,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'description' => $request->description,
-        ]);
+        ])->assignRole('user');
 
         Session::flash('success', 'User created successfully');
         return redirect()->back();
@@ -48,6 +48,7 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => "required|email|unique:users,email, $user->id",
             'password' => 'sometimes|nullable|min:8',
+            'role' => 'required|string|max:255',
         ]);
 
         $user->name = $request->name;
@@ -55,6 +56,13 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
         $user->description = $request->description;
         $user->save();
+        
+        if ($user->hasRole($request->role) ||  (isset($user->Roles[0]) && $user->hasRole($user->Roles[0]['name'])) ) {
+            $user->removeRole($request->role);
+            $user->removeRole($user->Roles[0]['name']);
+        }
+
+        $user->assignRole($request->role);
 
         Session::flash('success', 'User updated successfully');
         return redirect()->back();
