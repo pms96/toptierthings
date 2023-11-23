@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var generateAmazon = document.getElementById("generateAmazon");
 
     generateAmazon.addEventListener("keyup", function () {
-        var inputVal = generateAmazon.value.toLowerCase();
+        // var inputVal = generateAmazon.value.toLowerCase();
         
         var code = '?&linkCode=ll1&tag=toptierthin0d-21&linkId=1e86ecd8f09b1617011aadb482d6a3da&language=es_ES&ref_=as_li_ss_tl';
 
