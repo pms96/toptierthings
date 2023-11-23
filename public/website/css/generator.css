@@ -1,0 +1,123 @@
+input {
+    border: 1px solid #ccc;
+    font-size: 12px;
+    height: 30px;
+    padding: 4px 8px;
+    position: absolute;
+    width: 50%;
+    translate: -50%;
+}
+input:focus {
+    outline: none;
+}
+button {
+    text-align: center;
+}
+button:focus {
+    outline: none;
+}
+button.btn-search, button.btn-reset {
+    background: #a1a1a1;
+    border-radius: 0 25% 25% 0;
+    border: none;
+    height: 30px;
+    font-size: 12px;
+    padding: 4px;
+    position: absolute;
+    width: 30px;
+}
+.search-button {
+    float: left;
+    height: 50px;
+    margin: 0 8%;
+    position: absolute;
+    /* width: 34%; */
+}
+.search-button input {
+    border-right: none;
+    transition: all 0.3s ease-in;
+    width: 320px;
+}
+.search-button input:focus {
+    width: 420px;
+}
+.search-button input:focus ~ button.btn-search {
+    background: #a1a1a1;
+    border-radius: 0 25% 25% 0;
+    color: #fff;
+    left: 200px;
+}
+.search-button input:focus ~ button.btn-reset {
+    animation: bounceRight 0.6s;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.3, 0.2, 1, 0.8);
+    border-radius: 50%;
+    color: #fff;
+    left: 234px;
+    z-index: 1;
+}
+.search-button button.btn-search {
+    background: #ccc;
+    left: 160px;
+    transition: all 0.3s ease-in;
+}
+.search-button button.btn-reset {
+    background: #000;
+    height: 20px;
+    left: 160px;
+    top: 5px;
+    transition: all 0.3s ease-in;
+    width: 20px;
+    z-index: -1;
+}
+
+.result {
+    position: relative;
+	 width: 80%;
+	 overflow: hidden;
+}
+.result__info {
+    position: absolute;
+    bottom: 4px;
+    color: #fff;
+    font-size: 0.8rem;
+    transition: all 150ms ease-in-out;
+    transform: translateY(200%);
+    opacity: 0;
+}
+.result__info.right {
+    right: 8px;
+}
+.result__info.left {
+    left: 8px;
+}
+.result__viewbox {
+    width: 100%;
+    height: 100%;
+    background: #a1a1a1;
+    border-radius: #ccc;
+    color: #fff;
+    text-align: center;
+    /* line-height: 65px; */
+}
+.result #copy-btn {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    z-index: 2;
+}
+.result #copy-btn:active {
+    box-shadow: 0 0 0 200px rgba(255, 255, 255, 0.08);
+}
+.result:hover #copy-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.35);
+}

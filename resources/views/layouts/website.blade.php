@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('website') }}/css/aos.css">
 
     <link rel="stylesheet" href="{{ asset('website') }}/css/style.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/generator.css">
     <style>
       .pagination {
         margin-bottom: 0 !important;

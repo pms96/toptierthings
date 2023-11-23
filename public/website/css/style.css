@@ -99,6 +99,8 @@ h1, h2, h3, h4, h5,
       padding: 5em 0; } }
   .site-section.site-section-sm {
     padding: 4em 0; }
+  .site-section.site-section-home {
+    padding: 2em 0 5em 0; }
 
 .section-heading h2 {
   font-weight: 700;

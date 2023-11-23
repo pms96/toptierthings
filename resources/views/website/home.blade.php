@@ -1,6 +1,25 @@
 @extends('layouts.website')
 @section('content')
-<div class="site-section bg-light">
+
+<div class="site-section site-section-home bg-light">
+    <div class="container mb-5">
+        <div class="row justify-content-center ">
+            <div class="search-button">
+                <input type="text" name="search" id="generateAmazon" placeholder="Url Amazon">
+                <button type="submit" class="btn btn-search" id="cancelGenerate">
+                <i class="fa fa-search"></i>
+                </button>
+                <button type="reset" class="btn btn-reset fa fa-times"></button>  
+            </div>  
+            <div class="result mt-5" id="generator"  hidden>
+                <div class="result__title field-title">Generated Link</div>
+                <div class="result__info right" style="transform: translateY(0%); opacity: 0.75;">click to copy</div>
+                <div class="result__info left" style="transform: translateY(200%); opacity: 0;">copied</div>
+                <div class="result__viewbox" id="result"></div>
+                <button id="copy-btn" style="--x: 314px; --y: 19.5px; opacity: 1; pointer-events: all;"><i class="fa fa-copy"></i></button>
+            </div>           
+        </div>
+    </div>
     <div class="container">
         <div class="row align-items-stretch retro-layout-2">
             <div class="col-md-4">
@@ -152,3 +171,5 @@
     </div>
 </div> --}}
 @endsection
+
+<script src="{{ URL::asset('website/js/generator.js') }}"></script>
