@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateAmazon.addEventListener("keyup", function () {
         var inputVal = generateAmazon.value.toLowerCase();
         
-        var code = '?_encoding=UTF8&pd_rd_w=uK95o&content-id=amzn1.sym.e840d5e1-13c5-4f57-b545-cff67fed4621%3Aamzn1.symc.36bd837a-d66d-47d1-8457-ffe9a9f3ddab&pf_rd_p=e840d5e1-13c5-4f57-b545-cff67fed4621&pf_rd_r=AMGC5A4KCMZPR18EJ4QZ&pd_rd_wg=GM8tV&pd_rd_r=6fd252ca-801d-4a3d-a135-aaa5e1ca10fd&linkCode=ll1&tag=toptierthin0d-21&linkId=03d6faf3169c7731d9399b8af96a3afc&language=es_ES&ref_=as_li_ss_tl';
+        var code = '?&linkCode=ll1&tag=toptierthin0d-21&linkId=1e86ecd8f09b1617011aadb482d6a3da&language=es_ES&ref_=as_li_ss_tl';
 
         var result = inputVal+code;
 
