@@ -4,6 +4,8 @@
     <title>Top Tier Things</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
 
@@ -27,6 +29,7 @@
     </style>
 
     <!-- Google tag (gtag.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1F29XQLH0T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -36,7 +39,7 @@
         gtag('config', 'G-1F29XQLH0T');
     </script>
     <!--End Google tag (gtag.js) -->
-    
+
   </head>
   <body>
   

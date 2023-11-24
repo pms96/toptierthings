@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     generateAmazon.addEventListener("keyup", function () {
         var inputVal = generateAmazon.value;
-        
+
         var code = '?&linkCode=ll1&tag=toptierthin0d-21&linkId=1e86ecd8f09b1617011aadb482d6a3da&language=es_ES&ref_=as_li_ss_tl';
 
         var result = inputVal+code;
@@ -85,3 +85,87 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+function extractASIN(url) {
+
+    const parts = url.split("/");
+    const precedingIndex = parts.indexOf("dp");
+  
+    return parts[precedingIndex+1];
+  }
+
+function urlJustCopied ( ) {
+
+    const url = document.getElementById("result").innerHTML;
+    const code = extractASIN(url);
+
+    const params = {
+        'url':          url,
+        'product_code': code,
+    };
+
+    $.ajax({
+        type: 'POST',
+        url: 'url-amazon',
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        data:params,
+        success:function(data){
+            if ( data === '') {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 1000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Correcto'
+                })
+            }else{
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 1000,
+                    timerProgressBar: false,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Error'
+                })
+            }
+        },
+        error:function(){
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 1000,
+                timerProgressBar: false,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            
+            Toast.fire({
+                icon: 'error',
+                title: 'Error'
+            })
+
+        }
+     });
+
+}

@@ -15,8 +15,8 @@
                 <div class="result__title field-title">Generated Link</div>
                 <div class="result__info right" style="transform: translateY(0%); opacity: 0.75;">click to copy</div>
                 <div class="result__info left" style="transform: translateY(200%); opacity: 0;">copied</div>
-                <div class="result__viewbox" id="result"></div>
-                <button id="copy-btn" style="--x: 314px; --y: 19.5px; opacity: 1; pointer-events: all;"><i class="fa fa-copy"></i></button>
+                <div class="result__viewbox" id="result" onclick="urlJustCopied()"></div>
+                <button id="copy-btn" style="--x: 314px; --y: 19.5px; opacity: 1; pointer-events: all;" onclick="urlJustCopied()"><i class="fa fa-copy"></i></button>
             </div>           
         </div>
     </div>
