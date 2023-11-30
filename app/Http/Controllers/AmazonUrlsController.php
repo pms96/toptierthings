@@ -14,7 +14,8 @@ class AmazonUrlsController extends Controller
      */
     public function index()
     {
-        //
+        $urls = AmazonUrls::orderBy('created_at', 'DESC')->paginate(20);
+        return view('admin.generator.index', compact('urls'));
     }
 
     /**

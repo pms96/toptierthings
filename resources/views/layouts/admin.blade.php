@@ -9,7 +9,7 @@
   <title>Admin Panel</title>
   <link rel="stylesheet" href="{{ asset('admin') }}/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="{{ asset('admin') }}/css/adminlte.min.css">
-  {{-- <link rel="stylesheet" href="{{ asset('/css/roles.css') }}"> --}}
+  <link rel="stylesheet" href="{{ asset('/css/roles.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -92,6 +92,14 @@
               <i class="nav-icon fas fa-pen-square"></i>
               <p>
                 Post
+              </p>
+            </a>                    
+          </li>
+          <li class="nav-item mt-auto">
+            <a href="{{ route('urlgenerator.index') }}" class="nav-link {{ (request()->is('admin/urlgenerator*')) ? 'active': '' }}">
+              <i class="nav-icon fas fa-link"></i>
+              <p>
+                Url Generator
               </p>
             </a>                    
           </li>
